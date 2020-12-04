@@ -16,9 +16,9 @@ inertia:Infinity
     }
     display(){
         var angle=this.body.angle
-        var pos = this.body.postions
+        var pos = this.body.position
         push()
-      //  translate(pos.x,pos.y)
+       translate(pos.x,pos.y)
         rotate(angle)
         noStroke()
         fill(this.color)

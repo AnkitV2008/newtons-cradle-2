@@ -16,7 +16,7 @@ length:220
     }
     display(){
         if(this.sling.bodyA){
-        var pointA = this.sling.bodyA.postion
+        var pointA = this.sling.bodyA.position
         var pointB = this.pointB
         push()
         strokeWeight(3.5)

@@ -5,14 +5,17 @@ const Bodies = Matter.Bodies;
 const body = Matter.Body;
 const Render= Matter.Render;
 const Constraint = Matter.Constraint;
+const Mouse = Matter.Mouse
+const MouseConstraint = Matter.MouseConstraint
+
 
 var world,engine,canvas
 var pendulum1,pendulum2,pendulum3,pendulum4,pendulum5
 var sling1,sling2,sling3,sling4,sling5
-var mConstraint,Mouse
+var mConstraint
 function setup() {
 
-	createCanvas(windowWidth/2,windowHeight);
+	createCanvas(800,800);
 
 	engine = Engine.create();
 	world = engine.world;
@@ -41,9 +44,8 @@ sling5 = new Sling(pendulum5.body,{ x : 580, y : 200})
 
 
 function draw() {
-  background(100);
+  background(0);
 
-  rectMode(CENTER);
   Engine.update(engine);
   pendulum1.display();
   pendulum2.display();
